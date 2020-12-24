@@ -1,3 +1,6 @@
+.nav {
+  position: relative;
+}
 .menu {
   position: fixed;
   display: flex;
@@ -29,4 +32,36 @@
   border: none;
   font-size: 20px;
   color: #fff;
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 50px;
+  transform: translateY(-50%);
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  margin-bottom: 2px;
+  height: 2px;
+  width: 100%;
+  background-color: #921111;
+  transition: 0.5s all;
+}
+
+.hamburger.active span:first-child {
+  transform: rotate(-45deg);
+  margin-bottom: -2px;
+}
+
+.hamburger.active span:nth-child(2) {
+  display: none;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg);
 }
